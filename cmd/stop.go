@@ -3,6 +3,7 @@ package main
 import (
 	"github.com/spf13/cobra"
 	"io/ioutil"
+	"os"
 	"os/exec"
 )
 
@@ -16,7 +17,8 @@ var stopCmd = &cobra.Command{
 	Run: func(cmd *cobra.Command, args []string) {
 		strb, _ := ioutil.ReadFile("gonone.lock")
 		command := exec.Command("kill", string(strb))
-		command.Start()
+		_ = command.Start()
+		_ = os.Remove("gonone.lock")
 		println("gonone stop")
 	},
 }
