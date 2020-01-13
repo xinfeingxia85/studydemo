@@ -24,6 +24,7 @@ func NewApiMux() http.Handler {
 	initUserApi(s)
 
 	r.HandleFunc("/", DefaultHadle)
+	//r.PathPrefix("/").Handler(http.StripPrefix("/", http.FileServer(http.Dir("/web"))))
 
 	return r
 }
