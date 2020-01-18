@@ -29,3 +29,4 @@ func TestTableCalculate(t *testing.T) {
 		}
 	}
 }
+
