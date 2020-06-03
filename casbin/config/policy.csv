@@ -1,0 +1,3 @@
+p, role1, /users/:id, (GET)|(POST)
+p, role2, /users/:id, GET
+p, role3, /articles/:id, (GET)|(POST)
